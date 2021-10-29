@@ -3,6 +3,6 @@ import   LoginSlice  from './CounterSlice'
 
 export default configureStore({
     reducer: {
-        counter: LoginSlice
+        data: LoginSlice
       },
 })

@@ -12,7 +12,7 @@ export const LoginSlice = createSlice({
   reducers: {
     email: (state, actions) => {
 
-      console.log(actions)
+    //  console.log(actions)
       state.email = actions.payload
 
     },

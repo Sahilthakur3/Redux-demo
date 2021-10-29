@@ -21,7 +21,7 @@ function LoginScreen(props) {
 
     let dispatch = useDispatch()
     let data = useSelector(state => state)
-    console.log("data", data)
+    console.log("data is", data)
 
     const storeData = async () => {
         // console.log(data.Login.name)
@@ -31,8 +31,8 @@ function LoginScreen(props) {
 
         }
         else {
-            if (data.counter.email == val2 && data.counter.pass == val3) {
-                console.log(data.counter.email, data.counter.pass)
+            if (data.data.email == val2 && data.data.pass == val3) {
+                console.log(data.data.email, data.data.pass)
                 // props.navigation.navigate("dashboard") 
                 alert("LoginSuccessfully")
             }
@@ -98,7 +98,7 @@ function LoginScreen(props) {
                     <Text style={{ color: "white", fontSize: 15 }}>Forgot password?</Text>
                 </View>
                 <Text style={{ color: "white", fontSize: 15 }}>
-{data.counter.pass}                    </Text>
+{data.data.pass}                    </Text>
                 <TouchableOpacity onPress={() => storeData()}
                     style={{
                         backgroundColor: "#2E7C87",
@@ -119,7 +119,7 @@ function LoginScreen(props) {
                 </TouchableOpacity>
 
 
-                <TouchableOpacity onPress={() => props.navigation.navigate("signUp")}
+                <TouchableOpacity onPress={() => props.navigation.navigate("SignUp")}
                     style={{
                         backgroundColor: "#2E7C87",
                         height: 50,
